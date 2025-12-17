@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moose's Mobile Detail — Coming Soon</title>
+    <style>
+      :root {
+        --bg: #0d1b2a;
+        --panel: #11263a;
+        --accent: #56cfe1;
+        --text: #e6f1ff;
+        --muted: #9fb3c8;
+        --shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        background: radial-gradient(
+          circle at 20% 20%,
+          #193654 0%,
+          #0d1b2a 45%,
+          #0a1623 100%
+        );
+        color: var(--text);
+        display: grid;
+        place-items: center;
+        padding: 32px;
+      }
+      .card {
+        width: min(720px, 100%);
+        background: var(--panel);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+      }
+      .glow {
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        background: radial-gradient(
+          circle,
+          rgba(86, 207, 225, 0.2),
+          transparent 60%
+        );
+        top: -80px;
+        right: -80px;
+        filter: blur(4px);
+        pointer-events: none;
+      }
+      h1 {
+        font-size: clamp(2.2rem, 3vw + 1rem, 3rem);
+        letter-spacing: 0.5px;
+        margin-bottom: 12px;
+      }
+      p {
+        line-height: 1.6;
+        color: var(--muted);
+        margin-bottom: 18px;
+      }
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(86, 207, 225, 0.12);
+        color: var(--text);
+        padding: 10px 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(86, 207, 225, 0.35);
+        margin-bottom: 18px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+      }
+      .tag span {
+        width: 10px;
+        height: 10px;
+        background: var(--accent);
+        border-radius: 50%;
+        box-shadow: 0 0 8px var(--accent);
+      }
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 16px;
+        border-radius: 12px;
+        background: var(--accent);
+        color: #0b1a2a;
+        text-decoration: none;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        border: 1px solid #7be3f1;
+        box-shadow: 0 12px 24px rgba(86, 207, 225, 0.35);
+        transition: transform 120ms ease, box-shadow 120ms ease;
+      }
+      .cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 32px rgba(86, 207, 225, 0.45);
+      }
+      .footer {
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="tag">
+        <span></span> Heavy equipment and fleet detailing for Syracuse.
+      </div>
+      <h1>Moose's Mobile Detail</h1>
+      <p>
+        We are gearing up to bring on-site detailing to the machines that keep
+        your projects moving: excavators, skid steers, semis, service trucks,
+        and support vehicles. Exterior de-mud, interior sanitizing, and
+        paint-safe finishes—done where the work happens.
+      </p>
+      <p>
+        Serving Syracuse and surrounding job sites. Commercial clients only;
+        reach out and we will put your fleet on the early list.
+      </p>
+      <a
+        class="cta"
+        href="mailto:hello@moosesmobiledetail.com?subject=Moose%27s%20Mobile%20Detail%20-%20Early%20Access"
+      >
+        Join the waitlist.
+      </a>
+      <div class="footer">Coming soon • Central New York</div>
+    </div>
+  </body>
+</html>
